@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUSINESS INFORMATIQUE (BIC)</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0;
+        ; background-image: url(Background.png); }
+        header { background: #5763e4; color: #fff; padding: 20px 0; text-align: center; }
+        nav { background: #283593; padding: 10px 0; }
+        nav a { color: #fff; margin: 0 20px; text-decoration: none; font-weight: bold; }
+        nav a:hover { text-decoration: underline; }
+        .container { max-width: 1000px; margin: 30px auto; padding: 0 20px; }
+        .logo { display: flex; align-items: center; justify-content: center; }
+        .logo-img { width: 60px; height: 60px; background: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; }
+        .logo-img span { font-size: 2em; color: #1a237e; font-weight: bold; }
+        h1 { margin: 0; }
+        .page { display: none; }
+        .active { display: block; }
+        .services, .team { display: flex; gap: 30px; flex-wrap: wrap; }
+        .service, .member { background: #f5f5f5; padding: 20px; border-radius: 8px; flex: 1 1 250px; text-align: center; }
+        .service img, .member img { width: 100px; height: 100px; object-fit: cover; border-radius: 8px; margin-bottom: 10px; background: #ddd; }
+        form { display: flex; flex-direction: column; gap: 10px; max-width: 400px; margin: auto; }
+        input, textarea { padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
+        button { background: #1a237e; color: #fff; border: none; padding: 10px; border-radius: 4px; cursor: pointer; }
+        button:hover { background: #3949ab; }
+        footer { background: #1a237e; color: #fff; text-align: center; padding: 15px 0; margin-top: 40px; }
+    </style>
+    <script>
+        function showPage(pageId) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.getElementById(pageId).classList.add('active');
+        }
+        window.onload = function() {
+            showPage('accueil');
+            document.querySelectorAll('nav a').forEach(link => {
+                link.onclick = function(e) {
+                    e.preventDefault();
+                    showPage(this.getAttribute('data-page'));
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="LOGO BIC VALIDE.png" alt="LOGO BIC" style="width:80px;height:80px;margin-right:20px;">
+            <h1>BUSINESS INFORMATIQUE CENTER </h1>
+        </div>
+        <p>Votre partenaire digital de confiance</p>
+    </header>
+    <nav>
+        <a href="#" data-page="accueil">Accueil</a>
+        <a href="#" data-page="services">Nos Services</a>
+        <a href="#" data-page="equipe">Nôtre Equipe</a>
+        <a href="#" data-page="contact">Contact</a>
+    </nav>
+    <div class="container">
+        <!-- Accueil -->
+        <div id="accueil" class="page active">
+            <center><h2>Bienvenue chez BUSINESS INFORMATIQUE CENTER</h2></center>
+            <p>
+
+            <img src="ImageACC.png" alt="Image Accueil" style="width: 100%;border-radius:8px;margin-bottom:10px;">
+                Nous accompagnons les entreprises dans leur transformation digitale grâce à des solutions informatiques innovantes et sur mesure.
+            </p>
+        </div>
+        <!-- Nos Services -->
+        <div id="services" class="page">
+            <center>
+               <h2>Nos Services</h2> 
+            </center>
+            <div class="services">
+                <div class="service">
+                    <img src="Dev.Image.png" alt="Service 1">
+                    <h3>Développement Web</h3>
+                    <p>Création de sites web modernes et performants adaptés à vos besoins.</p>
+                </div>
+                <div class="service">
+                    <img src="Forma.Image.png" alt="Service 2">
+                    <h3>Formations</h3>
+                    <p>Accompagnement stratégique pour optimiser votre système d'information.</p>
+                    <center>
+                        <p><a href="FICHE DE RENSEIGNEMENT BIC - Copie.jpg" download="FICHE DE RENSEIGNEMENT">Télécharger La Fiche de Renseignement</a></p>
+                    </center>
+                </div>
+                <div class="service">
+                    <img src="Maint.Image.jpg" alt="Service 3">
+                    <h3>Maintenance & Support</h3>
+                    <p>Assistance technique et maintenance pour garantir la continuité de vos activités.</p>
+                </div>
+                <div class="service">
+                    <img src="Prestattion.Image.png" alt="Service 3">
+                    <h3>Prestation</h3>
+                    <p>Nous offrons une Prestation de qualité à un prix raisonnable.</p>
+                     <center>
+                        <p><a href="FICHE DE PRESTATION.pdf" download="FICHE DE PRESTATION">Télécharger La Fiche de Prestation</a></p>
+                    </center>
+                </div>
+            </div>
+        </div>
+        <!-- Nôtre Equipe -->
+        <div id="equipe" class="page">
+            <center>
+                <h2>Nôtre Equipe</h2>
+            </center>
+            <center>
+                <p>Nous avons une équipe jeune et dynamique</p>
+            </center>
+            <div class="team">
+                <div class="member">
+                    <img src="Rama.jpg" alt="Membre 1">
+                    <h4>Rama</h4>
+                    <p>Sécrétaire</p>
+                </div>
+                <div class="member">
+                    <img src="DIANE1.png" alt="Membre 2">
+                    <h4>Yakhouba DIANE</h4>
+                    <p>Administrateur Réseau& DGA</p>
+                </div>
+                <div class="member">
+                    <img src="Kapy.jpg" alt="Membre 3">
+                    <h4>Naby Kapy MANET</h4>
+                    <p>Maintenancien</p>
+                </div>
+                <div class="member">
+                    <img src="Isma.jpg" alt="Membre 3">
+                    <h4>Ismaïl FOFANA</h4>
+                    <p>Analyste Dévéqloppeur& PDG</p>
+                </div>
+            </div>
+        </div>
+        <!-- Contact -->
+        <div id="contact" class="page">
+            <center>
+                <h2>Contactez-nous</h2>
+            </center>
+            <form>
+                <input type="text" placeholder="Votre nom" required>
+                <input type="email" placeholder="Votre email" required>
+                <textarea rows="4" placeholder="Votre message" required></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 BUSINESS INFORMATIQUE (BIC) - Tous droits réservés.
+    </footer>
+</body>
+</html>
